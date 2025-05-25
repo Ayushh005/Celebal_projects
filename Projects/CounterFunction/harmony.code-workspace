@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../harmony"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Celebal Tech"
+	}
+}
