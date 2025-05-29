@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Table</title>
+    <style>
+        body{
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        table {
+            border-spacing: 3px;
+        }
+        table,th,td {
+            border: 2px solid black;
+            padding: 2px;
+        }
+        table#t1 {
+            background-color: #fff2cb;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="t1" style="width: 30%;">
+        <caption><b><u>Intern Personal Details</u></b></caption>
+        <tr><thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr></thead>
+        <tr><tbody>
+            <td>Ayush</td>
+            <td>22</td>
+            <td>Ambala</td>
+        </tr>
+        <tr>
+            <td>Shivam</td>
+            <td>23</td>
+            <td>Pune</td>
+        </tr>
+        <tr>
+            <td>Sumit</td>
+            <td>25</td>
+            <td>New Delhi</td>
+        </tr></tbody>
+    </table>
+</body>
+</html>
