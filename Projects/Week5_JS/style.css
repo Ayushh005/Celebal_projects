@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f3;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.magic-btn {
+  background-color: #6c63ff;
+  color: white;
+  border: 2px solid transparent;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.4s, color 0.4s, border 0.4s;
+  animation: pulse 2s infinite;
+}
+
+.magic-btn:hover {
+  background-color: white;
+  color: #6c63ff;
+  border: 2px solid #6c63ff;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(108, 99, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
