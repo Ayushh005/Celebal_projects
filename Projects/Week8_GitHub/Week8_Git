@@ -1,0 +1,118 @@
+
+1️⃣ Stage All Changes and Commit with a Meaningful Message
+```bash
+git add .
+git commit -m "Add/update multiple files"
+```
+
+- `git add .` stages **all** modified and new files.
+- `git commit -m` commits with clear descriptive message.
+
+---
+
+### 2️⃣ Move Commits from Wrong Branch to Correct Branch
+```bash
+# Step 1: Switch to the correct branch
+git checkout correct-branch
+
+# Step 2: Cherry-pick the commit(s)
+git cherry-pick <commit-hash>
+
+# Step 3: Delete the commit from the wrong branch (if needed)
+git checkout wrong-branch
+git reset --hard HEAD~1
+```
+
+- Use `git log` to find commit hashes if needed.
+
+---
+
+### 3️⃣ Create a New Branch, Commit Changes, and Push to GitHub
+```bash
+# Step 1: Create and switch to a new branch
+git checkout -b new-feature-branch
+
+# Step 2: Make changes, then stage and commit
+git add .
+git commit -m "Implement feature X"
+
+# Step 3: Push branch to GitHub
+git push origin new-feature-branch
+```
+
+---
+
+### 4️⃣ Fork, Modify, and Contribute to an Open Source Project
+1. **Fork** the repository via GitHub's UI.
+2. **Clone** your forked repo:
+   ```bash
+   git clone github.com/Ayushh005/Celebal_projects/tree/main/Projects/Week8_GitHub.git
+   ```
+3. **Create a branch** for your changes:
+   ```bash
+   git checkout -b fix-bug-branch
+   ```
+4. Make changes, then:
+   ```bash
+   git add .
+   git commit -m "Fix bug"
+   git push origin fix-bug-branch
+   ```
+5. **Create a Pull Request** on GitHub.
+6. Collaborate via PR comments, address feedback, and merge.
+
+---
+
+### 5️⃣ Resolve Merge Conflicts
+```bash
+# Step 1: Merge main into your branch
+git checkout your-branch
+git pull origin main
+
+# Step 2: Resolve conflicts manually in affected files
+
+# Step 3: After fixing conflicts
+git add .
+git commit -m "Resolve merge conflicts between main and your-branch"
+```
+
+- Use tools like VS Code or `git status` to identify conflicts.
+
+---
+
+### 6️⃣ Create Feature Branch from Latest Main
+```bash
+git checkout main
+git pull origin main
+git checkout -b feature-new
+```
+
+- This ensures your new branch is based on the **latest** main updates.
+
+---
+
+### 7️⃣ Revert to a Specific Commit (Discard Later Commits)
+```bash
+git reset --hard <commit-hash>
+```
+
+- Use this carefully—it deletes all changes after the target commit.
+- If pushed already, follow up with:
+  ```bash
+  git push --force
+  ```
+
+---
+
+### 8️⃣ Restore Accidentally Deleted File from Previous Commit
+```bash
+git checkout HEAD^ -- path/to/deleted-file
+```
+
+- This fetches the deleted file from the previous commit.
+- Then:
+  ```bash
+  git add path/to/deleted-file
+  git commit -m "Restore deleted file"
+  ```
+
